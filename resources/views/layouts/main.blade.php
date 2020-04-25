@@ -7,7 +7,7 @@
 	<title>Movie App</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
-	@livewireStyles
+	<livewire:styles>
 </head>
 
 <body class="font-sans bg-gray-900 text-white">
@@ -43,7 +43,7 @@
 
 	</nav>
 	@yield('content')
-	@livewireStyles
+	<livewire:scripts>
 	<footer class="border border-t border-gray-800">
         <div class="container mx-auto text-sm px-4 py-6">
             Powered by <a href="https://www.themoviedb.org/documentation/api" class="underline hover:text-gray-300">TMDb API</a>
