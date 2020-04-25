@@ -43,7 +43,7 @@
                     
                 </div>
 
-                @if($movie['videos']['results'] > 0)
+                @if(count($movie['videos']['results']) > 0)
                 	<div class="mt-12">
                 		<a href="https://youtube.com/watch?v={{$movie['videos']['results'][0]['key']}}"
 	                        @click="isOpen = true"
@@ -93,4 +93,25 @@
             </div>
         </div>
     </div>
+
+    <!-- Movie Images -->
+    <div class="movie-images">
+        <div class="container mx-auto px-4 py-16">
+            <h2 class="text-4xl font-semibold">Images</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                @foreach ($movie['images']['backdrops'] as $image)
+                	@if($loop->index < 8)
+                    <div class="mt-8">
+                        <a href="#">
+                            <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$image['file_path'] }}" alt="image1" class="hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+                    </div>
+                    @endif
+                @endforeach
+            </div>
+
+           
+        </div>
+    </div> <!-- end movie-images -->
+
 @endsection
