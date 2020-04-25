@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, intial-scale=1">	
 	<title>Movie App</title>
 
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
 </head>
 
 <body class="font-sans bg-gray-900 text-white">
