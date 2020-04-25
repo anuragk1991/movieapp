@@ -7,6 +7,7 @@
 	<title>Movie App</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+	@livewireStyles
 </head>
 
 <body class="font-sans bg-gray-900 text-white">
@@ -31,9 +32,7 @@
 			</ul>
 
 			<div class="flex flex-col md:flex-row items-center">
-            	<div class="relative">
-            		<input type="text" class="bg-gray-800 text-sm rounded-full w-64  px-4 pl-8 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
-            	</div>
+            	<livewire:search-dropdown>
                 <div class="md:ml-4 mt-3 md:mt-0">
                     <a href="#">
                         <img src="/img/avatar1.jpg" alt="avatar" class="rounded-full w-8 h-8">
@@ -44,6 +43,7 @@
 
 	</nav>
 	@yield('content')
+	@livewireStyles
 	<footer class="border border-t border-gray-800">
         <div class="container mx-auto text-sm px-4 py-6">
             Powered by <a href="https://www.themoviedb.org/documentation/api" class="underline hover:text-gray-300">TMDb API</a>

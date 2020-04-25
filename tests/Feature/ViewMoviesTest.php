@@ -12,7 +12,7 @@ class ViewMovieTest extends TestCase
      *
      * @return void
      */
-    public function the_main_page_shows_correct_info()
+    public function test_the_main_page_shows_correct_info()
     {
         $response = $this->get(route('movies.index'));
 
